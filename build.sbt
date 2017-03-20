@@ -12,9 +12,10 @@ val targetPlayVersion = "2.5.12"
 
 libraryDependencies ++= Seq(
   "com.typesafe.play"           %%  "play"                  % targetPlayVersion       % "provided",
-  "com.typesafe.play"           %%  "play-specs2"           % targetPlayVersion       % "test",
   "com.themillhousegroup"       %%  "mondrian"              % "0.4.60",
-  "org.mockito"                 %   "mockito-all"           % "1.10.19"       % "test"
+  "com.themillhousegroup"       %% "sses"                   % "1.0.10",
+  "com.typesafe.play"           %%  "play-specs2"           % targetPlayVersion       % "test",
+  "org.mockito"                 %   "mockito-all"           % "1.10.19"               % "test"
 )
 
 resolvers ++= Seq(  "oss-snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
