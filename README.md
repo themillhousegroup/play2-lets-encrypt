@@ -1,8 +1,10 @@
 play2letsencrypt
 ============================
 
-Project info goes here
+A one-stop shop to get your Play Framework + ReactiveMongo project to use a Let's Encrypt certificate,
+and force all connections to use HTTPS.
 
+After installing this library, the [Qualys SSL Server Test](https://www.ssllabs.com/ssltest/index.html) should give you A+ scores across the board!
 
 ### Installation
 
@@ -35,7 +37,6 @@ baz
 ```
 
 
-### Still To-Do
-
 ### Credits
+Let's Encrypt
 
