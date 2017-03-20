@@ -1,6 +1,6 @@
 package com.themillhousegroup.play2letsencrypt
 
-import javax.inject.Inject
+import javax.inject.{ Inject, Singleton }
 
 import com.themillhousegroup.mondrian.TypedMongoService
 import play.api.libs.json.Json
@@ -9,6 +9,7 @@ import com.themillhousegroup.play2letsencrypt.LetsEncryptChallengeResponsePairJs
 
 import scala.concurrent.Future
 
+@Singleton
 class LetsEncryptService @Inject() (val reactiveMongoApi: ReactiveMongoApi)
     extends TypedMongoService[LetsEncryptChallengeResponsePair]("letsEncryptPairs") {
 
