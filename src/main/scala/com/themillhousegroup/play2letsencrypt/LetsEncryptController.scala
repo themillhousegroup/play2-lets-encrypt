@@ -15,7 +15,7 @@ class LetsEncryptController @Inject() (val letsEncryptService: LetsEncryptServic
     val configuration: Configuration) extends Controller {
 
   lazy val endpointUsername = configuration.getString("letsencrypt.endpoint.username").getOrElse("l3ts3ncrypt")
-  lazy val endpointPassword = configuration.getString("letsencrypt.endpoint.password").getOrElse("l3ts3ncrypt")
+  lazy val endpointPassword = configuration.getString("letsencrypt.endpoint.password").get // Explode if this one is not set
 
   def respondTo(challenge: String) = Action.async {
 
